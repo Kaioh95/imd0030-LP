@@ -24,10 +24,11 @@ int main(int argc, char* argv[]){
 		sapos[i].pular();
 		cout<<endl;
 		if(sapos[i].getdistancia_percorrida() >= Sapo::getDistancia_total()){
-			cout<<"O sapo vencedor foi o #"<<sapos[i].getidentificador()<<endl;
+			/*cout<<"O sapo vencedor foi o #"<<sapos[i].getidentificador()<<endl;
 			cout<<"Quantidade de pulos: "<<sapos[i].getqtd_pulos_dados()<<endl;
-			cout<<"Distância percorrida: "<<sapos[i].getdistancia_percorrida()<<endl;
-			return 0;
+			cout<<"Distância percorrida: "<<sapos[i].getdistancia_percorrida()<<endl;*/
+			cout<<sapos[i];
+			//return 0;
 			break;
 		}
 		

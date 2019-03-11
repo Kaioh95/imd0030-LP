@@ -1,6 +1,7 @@
 #ifndef SAPOS_H
 #define SAPOS_H
 #include <random>
+#include <iostream>
 
 class Sapo{
 private:
@@ -29,6 +30,7 @@ public:
 	int getqtd_pulos_dados();
 
 	void pular();
+	friend std::ostream& operator<<(std::ostream &o, Sapo &s);
 	~Sapo();
 
 };
