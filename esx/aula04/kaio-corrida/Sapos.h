@@ -5,12 +5,9 @@
 
 class Sapo{
 private:
-	int identificador;
+	std::string identificador;
 	float distancia_percorrida = 0;
 	int qtd_pulos_dados = 0;
-	std::random_device rd;
-	std::default_random_engine gen;
-	std::uniform_real_distribution<> dis;
 public:
 	Sapo();
 
@@ -20,8 +17,8 @@ public:
 	static float pulo_MAX;
 	static float getPulo_MAX();
 
-	void setidentificador(int id);
-	int getidentificador();
+	void setidentificador(std::string id);
+	std::string getidentificador();
 
 	void setdistancia_percorrida(float dis);
 	float getdistancia_percorrida();
@@ -34,10 +31,4 @@ public:
 	~Sapo();
 
 };
-
-
-
-
-
-
 #endif

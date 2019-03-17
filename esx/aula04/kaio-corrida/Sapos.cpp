@@ -1,9 +1,7 @@
 #include "Sapos.h"
-#include <random>
 #include <iostream>
 
-Sapo::Sapo():rd(), gen(rd()), dis(1, Sapo::getPulo_MAX()){
-}
+Sapo::Sapo(){}
 
 float Sapo::getDistancia_total(){
 	return distancia_total;
@@ -13,10 +11,10 @@ float Sapo::getPulo_MAX(){
 	return pulo_MAX;
 }
 
-void Sapo::setidentificador(int id){
+void Sapo::setidentificador(std::string id){
 	identificador = id;
 }
-int Sapo::getidentificador(){
+std::string Sapo::getidentificador(){
 	return identificador;
 }
 
@@ -36,19 +34,20 @@ int Sapo::getqtd_pulos_dados(){
 
 
 void Sapo::pular(){
-	float pulo = std::round(dis(gen));
+	std::random_device rd;
+	std::default_random_engine gen(rd());
+	std::uniform_real_distribution<> dis(1, pulo_MAX);
+	float pulo = dis(gen);
 	std::cout<<"O sapo pulou "<<pulo<<" metros"<<std::endl;
 	setdistancia_percorrida(pulo);
 	setqtd_pulos_dados(1);
 }
 
 std::ostream& operator<<(std::ostream &o, Sapo &s){
-	o<<"O sapo vencedor foi o #"<<s.identificador<<std::endl;
+	o<<"O sapo vencedor foi "<<s.identificador<<std::endl;
 	o<<"Quantidade de pulos: "<<s.qtd_pulos_dados<<std::endl;
 	o<<"Distância percorrida: "<<s.distancia_percorrida<<std::endl;
 	return o;
 }
 
-Sapo::~Sapo(){
-
-}
+Sapo::~Sapo(){}

@@ -1,16 +1,19 @@
 PROG = ex
 CC = g++
 CPPFLAGS = -Wall -std=c++11
-OBJS = Corrida_de_sapos.o Sapos.o
+OBJS = main.o Sapos.o Corrida.o
 
 $(PROG) : $(OBJS)
 	$(CC) -o $(PROG) $(OBJS)
 
-Corrida_de_sapos.o:
-	$(CC) $(CPPFLAGS) -c Corrida_de_sapos.cpp
+main.o:
+	$(CC) $(CPPFLAGS) -c main.cpp
 
 Sapos.o: Sapos.h
 	$(CC) $(CPPFLAGS) -c Sapos.cpp
+
+Corrida.o: Corrida.h
+	$(CC) $(CPPFLAGS) -c Corrida.cpp
 
 clean:
 	rm -f core $(PROG) $(OBJS)
