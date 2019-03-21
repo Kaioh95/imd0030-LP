@@ -33,4 +33,12 @@ ostream& operator<<(ostream &o, funcionario &f){
 	return o;
 }
 
+bool operator==(funcionario const &f){
+	if(nome.compare(f.nome) == 0){
+		return true;
+	}
+	else
+		return false;
+}
+
 funcioanrio::~funcionario(){}

@@ -24,6 +24,8 @@ public:
 	friend istream& operator>>(istream &i, funcionario &f);
 	friend ostream& operator<<(ostream &o, funcionario &f);
 
+	bool operator==(funcionario const &f);
+
 	~funcionario();
 };
 #endif

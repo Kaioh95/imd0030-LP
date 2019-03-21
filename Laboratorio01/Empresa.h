@@ -7,7 +7,7 @@ class empresa{
 private:
 	string nome_empresa;
 	int cnpj;
-	vector<funcionario> lista_funcioanrios;
+	vector<funcionario> lista_funcionarios;
 
 public:
 	empresa();
@@ -17,9 +17,9 @@ public:
 
 	static int num_funcionarios;
 	static int getnum_funcionarios();
-/*
-	void addFuncionario();
-	void aumento(float x);
+
+	void addFuncionario(string n, int sal, int data);
+/*	void aumento(float x);
 	void list_func_exp();
 */
 	~empresa();
