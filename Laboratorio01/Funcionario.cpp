@@ -1,9 +1,10 @@
 #include "Funcionario.h"
-#include <iostream>
 
-funcionario::funcioanrio(){}
+using namespace std;
 
-string getnome(){
+funcionario::funcionario(){}
+
+string funcionario::getnome(){
 	return nome;
 }
 void funcionario::setnome(string n){
@@ -17,23 +18,27 @@ void funcionario::setsalario(float s){
 	salario = s;
 }
 
-int funcionario::getdata_admissao(){
+date funcionario::getdata_admissao(){
 	return data_admissao;
 }
-void funcionario::getdata_admissao(int d){
+void funcionario::setdata_admissao(date d){
 	data_admissao = d;
 }
 
 istream& operator>>(istream &i, funcionario &f){
-	i>>f.nome>>f.salario>>f.data_admissao;
+	i>>f.nome>>f.salario;
+	//f.data_admissao;
 	return i;
 }
 ostream& operator<<(ostream &o, funcionario &f){
-	o<<f.nome<<f.salario<<f.data_admissao;
+	o<<"Nome: "<<f.nome<<endl;
+	o<<"Salário: "<<f.salario<<endl;
+	cout<<"Data de admissao:"<<f.data_admissao<<endl;
+	//o<<"Data de admissão"<<f.data_admissao<<endl;
 	return o;
 }
 
-bool operator==(funcionario const &f){
+bool funcionario::operator==(funcionario const &f){
 	if(nome.compare(f.nome) == 0){
 		return true;
 	}
@@ -41,4 +46,4 @@ bool operator==(funcionario const &f){
 		return false;
 }
 
-funcioanrio::~funcionario(){}
+funcionario::~funcionario(){}

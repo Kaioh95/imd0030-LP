@@ -1,11 +1,12 @@
-// file:  date.h
-//  author:  Bernt  A  Oedegaard.
+#ifndef _DATE_H_
+#define _DATE_H_
 
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
-classdate{
-protected:
+class date{
+private:
 	int year_;
 	int month_;
 	int day_;
@@ -13,30 +14,19 @@ public:
 	date();
 	date(const int& d, const int& m, const int& y);
 
-bool valid(void) const;
+	bool valid(void) const;
 
-int day() const;
-int month() const;
-int year() const;
+	int getday() const;
+	int getmonth() const;
+	int getyear() const;
 
-void set_day(const int& day);
-void set_month(const int& month);
-void set_year(const int& year);
+	void set_day (const int& day);
+	void set_month (const int& month);
+	void set_year(const int& year);
 
-date operator++();//  prefix
-date operator++(int);//  postfix
-date operator−−();//  prefix
-date operator−−(int);//  postfix
-
+	friend istream& operator>>(istream& is, date& d);
+	friend ostream& operator<<(ostream& os, const date& d);
 };
 
-bool operator == (const date&, const date&);//  comparison  operators
-bool operator != (const date&, const date&);
-bool operator < (const date&, const date&);
-bool operator > (const date&, const date&);
-bool operator <= (const date&, const date&);
-bool operator >= (const date&,const date&);
-
-ostream& operator << (ostream& os, const date&d);//  output  operator
 
 #endif

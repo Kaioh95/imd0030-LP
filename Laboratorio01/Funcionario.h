@@ -1,6 +1,8 @@
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 #include <string>
+#include <iostream>
+#include "date.h"
 
 using namespace std;
 
@@ -8,7 +10,7 @@ class funcionario{
 private:
 	string nome;
 	float salario;
-	int data_admissao;
+	date data_admissao;
 public:
 	funcionario();
 
@@ -18,8 +20,8 @@ public:
 	float getsalario();
 	void setsalario(float s);
 
-	int getdata_admissao();
-	void setdata_admissao(int d);
+	date getdata_admissao();
+	void setdata_admissao(date d);
 
 	friend istream& operator>>(istream &i, funcionario &f);
 	friend ostream& operator<<(ostream &o, funcionario &f);

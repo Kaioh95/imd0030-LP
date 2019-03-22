@@ -2,6 +2,10 @@
 #define EMPRESA_H
 #include <string>
 #include <vector>
+#include <iostream>
+#include "Funcionario.h"
+
+using namespace std;
 
 class empresa{
 private:
@@ -18,10 +22,12 @@ public:
 	static int num_funcionarios;
 	static int getnum_funcionarios();
 
-	void addFuncionario(string n, int sal, int data);
-/*	void aumento(float x);
-	void list_func_exp();
-*/
+	void addFuncionario();
+	void aumento(float x);
+	void media();
+	void listar_func();
+//	void list_func_exp();
+
 	~empresa();
 };
 #endif
