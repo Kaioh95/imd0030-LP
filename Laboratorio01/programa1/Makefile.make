@@ -1,6 +1,6 @@
 PROG = ex
 CC = g++
-CPPFLAGS = -Wall -std=c++11 -I/include
+CPPFLAGS = -Wall -std=c++11
 OBJS = main.o Corrida.o Empresa.o Funcionario.o date.o
 
 $(PROG) : $(OBJS)
