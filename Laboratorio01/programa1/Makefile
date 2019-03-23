@@ -14,7 +14,7 @@ Controle.o: Controle.h
 	$(CC) $(CPPFLAGS) -c Controle.cpp
 
 Empresa.o: Empresa.h
-	$(CC) $(CPPFLAGS) -c Emrpesa.cpp
+	$(CC) $(CPPFLAGS) -c Empresa.cpp
 
 Funcionario.o: Funcionario.h
 	$(CC) $(CPPFLAGS) -c Funcionario.cpp

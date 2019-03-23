@@ -28,7 +28,7 @@ void controle::operacoes(){
 	empresas[empresas.size()-1].set_cnpj(113);
 
 
-	while(j>-5){
+	while(j>=0){
 		cout<<"______________________________________________________________"<<endl;
 		for(int k=0; k < (int)empresas.size(); k++){
 			cout<<"Número correspondente:("<<k<<")"<<endl;
@@ -39,7 +39,7 @@ void controle::operacoes(){
 
 		cout<<"Digite um número que correnponde a uma das empresas: ";
 		cin>>j;
-		if(j<0 || j>(int)empresas.size()-1){
+		while(j>(int)empresas.size()-1){
 			cout<<"empresa inexistente, digite novamente: ";
 			cin>>j;
 		}

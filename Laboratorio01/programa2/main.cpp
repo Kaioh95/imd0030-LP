@@ -1,5 +1,5 @@
 #include <iostream>
-#include "jogo_de_dados.h"
+#include "Jogo_de_dados.h"
 
 using namespace std;
 

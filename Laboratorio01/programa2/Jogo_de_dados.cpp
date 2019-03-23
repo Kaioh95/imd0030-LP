@@ -35,6 +35,7 @@ int jogo::run(int num_de_jogadores, int num_alvo){
 			else if(jogadores[i].get_pontos_agregados() > num_alvo){
 				cout<<"O jogador "<<jogadores[i].get_id()<<", estourou!"<<endl;
 				jogadores.erase(jogadores.begin()+i);
+				i -= 1;
 			}
 		}
 		else if(acao_do_jogador == 0){
@@ -45,8 +46,8 @@ int jogo::run(int num_de_jogadores, int num_alvo){
 
 		if(jogadores.size() == 1 && list_jogadores_fora.empty()){
 			cout<<"1O jogador vencedor foi: "<<endl;
-			cout<<jogadores[i]<<endl;
-			return 1;
+			cout<<jogadores[0]<<endl;
+			return 0;
 		}
 		if(!list_jogadores_fora.empty() && jogadores.empty()){
 			int vencedor;
@@ -67,6 +68,7 @@ int jogo::run(int num_de_jogadores, int num_alvo){
 		if (i >= (int)jogadores.size()-1){
 			int vencedor_rodada;
 			int pts = 0;
+			cout<<"----------------------FIM DA RODADA----------------------"<<endl; 
 
 			for(int j=0; j<(int)jogadores.size(); j++){
 				cout<<endl<<jogadores[j]<<endl;
