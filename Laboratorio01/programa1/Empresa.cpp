@@ -117,4 +117,5 @@ ostream& operator<<(ostream& o, empresa const &e){
 	return o;
 }
 
-empresa::~empresa(){}
+empresa::~empresa(){
+}

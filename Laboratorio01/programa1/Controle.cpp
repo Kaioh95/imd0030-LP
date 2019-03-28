@@ -73,4 +73,5 @@ void controle::operacoes(){
 	}
 }
 
-controle::~controle(){}
+controle::~controle(){
+}
