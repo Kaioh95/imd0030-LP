@@ -1,3 +1,4 @@
+//Kaio Henrique de Sousa && Álvaro Prudêncio
 #ifndef CONTROLE_H
 #define CONTROLE_H
 
@@ -16,6 +17,7 @@ public:
 	void set_empresas(vector<empresa> e);
 	vector<empresa> get_empresas();
 
+	void addEmpresa(string n, int cnp);
 	void operacoes();
 
 	~controle();

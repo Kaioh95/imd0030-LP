@@ -1,3 +1,4 @@
+//Autor: Kaio Henrique de Sousa
 #ifndef JOGO_DE_DADOS_H
 #define JOGO_DE_DADOS_H
 

@@ -1,3 +1,4 @@
+//Kaio Henrique de Sousa && Álvaro Prudêncio
 #ifndef EMPRESA_H
 #define EMPRESA_H
 #include <string>
@@ -17,7 +18,7 @@ private:
 
 public:
 	empresa();
-	empresa(string n, int c, vector<funcionario> lf);
+	empresa(string n, int cn);
 
 	string get_nome_empresa();
 	int get_cnpj();
@@ -34,6 +35,7 @@ public:
 	static int getnum_funcionarios();
 
 	void addFuncionario();
+	void addFuncionario(string n, int s, int dd, int mm, int aa);
 	void aumento(float x);
 	void media();
 	void listar_func();

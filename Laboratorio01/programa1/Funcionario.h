@@ -1,3 +1,4 @@
+//Kaio Henrique de Sousa && Álvaro Prudêncio
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 #include <string>

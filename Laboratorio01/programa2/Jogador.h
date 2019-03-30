@@ -1,3 +1,4 @@
+//Autor: Kaio Henrique de Sousa
 #ifndef JOGADOR_H
 #define JOGADOR_H
 #include <iostream>

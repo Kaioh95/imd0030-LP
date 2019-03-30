@@ -4,7 +4,7 @@ using namespace std;
 
 funcionario::funcionario(){}
 
-
+//Métodos get
 string funcionario::getnome(){
 	return nome;
 }
@@ -15,7 +15,7 @@ date funcionario::getdata_admissao(){
 	return data_admissao;
 }
 
-
+//Métodos set
 void funcionario::setnome(string n){
 	nome = n;
 }
@@ -26,12 +26,12 @@ void funcionario::setdata_admissao(date d){
 	data_admissao = d;
 }
 
-
+//Sobrecarga de operador de extração.
 istream& operator>>(istream &i, funcionario &f){
 	i>>f.nome>>f.salario;
 	return i;
 }
-
+//Sobrecarga de operador de inserção.
 ostream& operator<<(ostream &o, funcionario &f){
 	o<<"Nome: "<<f.nome<<endl;
 	o<<"Salário: "<<f.salario<<endl;
@@ -39,7 +39,7 @@ ostream& operator<<(ostream &o, funcionario &f){
 	return o;
 }
 
-
+//Sobrecarga de operador de comparação
 bool funcionario::operator==(funcionario const &f){
 	if(nome.compare(f.nome) == 0){
 		return true;

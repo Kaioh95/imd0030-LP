@@ -53,7 +53,7 @@ ostream& operator<<(ostream& os, const date& d){
 	return os;
 }
 
-
+//Função que transforma a data de em dias, desde o ano 0.
 int date::convert_date_to_days(){
 	int number_of_days = 0;
 	number_of_days += day_;
@@ -95,7 +95,7 @@ int date::convert_date_to_days(){
 	return number_of_days;
 }
 
-
+//Sobrecarga do operador de subtração, para cálculo posterior.
 int date::operator- (date d){
 	int days = convert_date_to_days() - d.convert_date_to_days();
 	return days;

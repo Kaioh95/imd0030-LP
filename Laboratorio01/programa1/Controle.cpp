@@ -11,23 +11,30 @@ void controle::set_empresas(vector<empresa> e){
 vector<empresa> controle::get_empresas(){
 	return empresas;
 }
-
+//Fução parametrizada que utiliza um vector para adicionar empresas
+void controle::addEmpresa(string n, int cnp){
+	empresas.resize(empresas.size()+1);
+	empresas[empresas.size()-1].set_nome_empresa(n);
+	empresas[empresas.size()-1].set_cnpj(cnp);
+}
 void controle::operacoes(){
 	int i=-1, j=0;
+	//Empresas padrão para texte
+	addEmpresa("Emp0", 111);
+	addEmpresa("Emp1", 112);
+	addEmpresa("Emp2", 113);
+	empresas[0].addFuncionario("Maria", 2000, 01, 03, 2019);
+	empresas[1].addFuncionario("Maria", 2000, 05, 01, 2019);
+	empresas[2].addFuncionario("Maria", 2000, 20, 12, 2018);
 
-	empresas.resize(empresas.size()+1);
-	empresas[empresas.size()-1].set_nome_empresa("emp0");
-	empresas[empresas.size()-1].set_cnpj(111);
-
-	empresas.resize(empresas.size()+1);
-	empresas[empresas.size()-1].set_nome_empresa("emp1");
-	empresas[empresas.size()-1].set_cnpj(112);
-
-	empresas.resize(empresas.size()+1);
-	empresas[empresas.size()-1].set_nome_empresa("emp2");
-	empresas[empresas.size()-1].set_cnpj(113);
-
-
+	/*
+	O seguinte while loop permite navegar pelas
+	empresas criadas. Uma vez que estiver em uma
+	das empresas, é possível adicionar funcionários,
+	dar aumentos aos funcionários, listar todos funcioanrios,
+	Lista funcionarios em experiência e mostrar e média de
+	funcionários por empresa.
+	*/
 	while(j>=0){
 		cout<<"______________________________________________________________"<<endl;
 		for(int k=0; k < (int)empresas.size(); k++){
@@ -73,5 +80,12 @@ void controle::operacoes(){
 	}
 }
 
+/*Este destrutor apaga cada elemento do 
+vector de empresas, pois o mesmo é criado dinâmicamente*/
 controle::~controle(){
+	int tam = empresas.size();
+
+	for(int i=0; i<tam; i++){
+		empresas.pop_back();
+	}
 }

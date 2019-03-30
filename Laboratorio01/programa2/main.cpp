@@ -1,3 +1,4 @@
+//Autor: Kaio Henrique de Sousa
 #include <iostream>
 #include "Jogo_de_dados.h"
 
